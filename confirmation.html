@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenu Premium Débloqué - CISCK M1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>CISCK M1</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="gratuit.html">Formule Gratuite</a></li>
+            <li><a href="premium.html">Formule Premium</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="page-header"
+             style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+        <h1><i class="fas fa-check-circle"></i> Abonnement Premium Activé</h1>
+        <p>Félicitations ! Vous avez maintenant accès à tous les cours.</p>
+    </section>
+
+    <section class="content-section">
+
+        <!-- ===================================================== -->
+        <!-- COURS PREMIUM : MÉTHODE MPM -->
+        <!-- Remplace la section MPM de confirmation.html par ce code -->
+        <!-- ===================================================== -->
+
+        <div class="fiche-technique">
+            <h2><i class="fas fa-project-diagram"></i> Méthode MPM</h2>
+
+            <h3>1. Définition</h3>
+            <p>
+                Faire l’ordonnancement d’un projet consiste à organiser les différentes
+                tâches en respectant les contraintes d’antériorité, tout en minimisant
+                la durée totale de réalisation.
+            </p>
+
+            <p>
+                La méthode MPM (Méthode des Potentiels Métra) permet :
+            </p>
+            <ul>
+                <li>d’identifier l’ordre d’exécution des tâches ; </li>
+                <li>de calculer les dates au plus tôt et au plus tard ; </li>
+                <li>de déterminer les marges ; </li>
+                <li>de repérer les tâches critiques ; </li>
+                <li>de calculer la durée totale du projet. </li>
+            </ul>
+
+            <h3>2. Méthode</h3>
+            <p>Pour construire un graphe d’ordonnancement, on effectue les étapes suivantes :</p>
+
+            <ol style="padding-left: 1.5rem;">
+                <li style="margin-bottom: 0.75rem;">
+                    Déterminer le niveau de chaque tâche grâce à la matrice des niveaux.
+                </li>
+                <li style="margin-bottom: 0.75rem;">
+                    Représenter le projet sous forme d’un graphe pondéré.
+                </li>
+                <li style="margin-bottom: 0.75rem;">
+                    Calculer les dates au plus tôt.
+                </li>
+                <li style="margin-bottom: 0.75rem;">
+                    Calculer les dates au plus tard.
+                </li>
+                <li style="margin-bottom: 0.75rem;">
+                    Calculer les marges.
+                </li>
+                <li>
+                    Déterminer les tâches critiques et le chemin critique.
+                </li>
+            </ol>
+
+            <h3>3. Représentation d’une tâche</h3>
+            <p>
+                Chaque tâche possède :
+            </p>
+            <ul>
+                <li>une date au plus tôt ; </li>
+                <li>une date au plus tard ; </li>
+                <li>une marge. </li>
+            </ul>
+
+            <div class="formula">
+                Marge = Date au plus tard − Date au plus tôt
+            </div>
+
+            <h3>Exemple de calcul de marge</h3>
+            <p>
+                Pour la tâche A :
+            </p>
+            <ul>
+                <li>Date au plus tôt = 5</li>
+                <li>Date au plus tard = 9</li>
+            </ul>
+
+            <div class="formula">
+                Marge = 9 − 5 = 4 jours
+            </div>
+
+            <p>
+                La tâche A peut donc être retardée de 4 jours sans retarder
+                la réalisation du projet.
+            </p>
+
+            <h3>4. Tâches critiques</h3>
+            <p>
+                Une tâche est dite critique lorsque sa marge est nulle.
+            </p>
+
+            <div class="formula">
+                Si Marge = 0 → Tâche critique
+            </div>
+
+            <p>
+                Toute tâche critique doit être réalisée sans retard.
+            </p>
+
+            <h3>5. Chemin critique</h3>
+            <p>
+                Le chemin critique est la succession des tâches critiques reliant
+                le début à la fin du projet.
+            </p>
+
+            <p>
+                Il détermine la durée minimale de réalisation du projet.
+            </p>
+
+            <h3>6. Construction du diagramme de GANTT</h3>
+            <p>
+                Pour construire un diagramme de GANTT, il faut d’abord réaliser
+                la matrice des niveaux.
+            </p>
+
+            <p>
+                Le diagramme de GANTT permet de visualiser la durée et la position
+                de chaque tâche sur une échelle de temps.
+            </p>
+
+            <h3>7. Exemple complet : Construction d’un entrepôt</h3>
+
+            <p>
+                La construction d’un entrepôt est décomposée comme suit :
+            </p>
+
+            <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                    <tr style="background:#f3f4f6;">
+                        <th style="padding:10px; border:1px solid #ddd;">Tâche</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Antériorités</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Durée (jours)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">A - Acceptation des plans</td>
+                        <td style="padding:10px; border:1px solid #ddd;">B</td>
+                        <td style="padding:10px; border:1px solid #ddd;">3</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">B - Préparation du terrain</td>
+                        <td style="padding:10px; border:1px solid #ddd;">E</td>
+                        <td style="padding:10px; border:1px solid #ddd;">9</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">C - Commande de matériaux</td>
+                        <td style="padding:10px; border:1px solid #ddd;">G</td>
+                        <td style="padding:10px; border:1px solid #ddd;">4</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">D - Creusage des fondations</td>
+                        <td style="padding:10px; border:1px solid #ddd;">C, E, G</td>
+                        <td style="padding:10px; border:1px solid #ddd;">6</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">E - Commande portes/fenêtres</td>
+                        <td style="padding:10px; border:1px solid #ddd;">Aucune</td>
+                        <td style="padding:10px; border:1px solid #ddd;">2</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">F - Livraison des matériaux</td>
+                        <td style="padding:10px; border:1px solid #ddd;">B, C</td>
+                        <td style="padding:10px; border:1px solid #ddd;">4</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">G - Coulage des fondations</td>
+                        <td style="padding:10px; border:1px solid #ddd;">Aucune</td>
+                        <td style="padding:10px; border:1px solid #ddd;">7</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>8. Matrice des niveaux</h3>
+
+            <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                    <tr style="background:#f3f4f6;">
+                        <th style="padding:10px; border:1px solid #ddd;">Niveau</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Tâches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">N1</td>
+                        <td style="padding:10px; border:1px solid #ddd;">E, G</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">N2</td>
+                        <td style="padding:10px; border:1px solid #ddd;">B, C</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">N3</td>
+                        <td style="padding:10px; border:1px solid #ddd;">D, A</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">N4</td>
+                        <td style="padding:10px; border:1px solid #ddd;">F</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>9. Diagramme de GANTT</h3>
+            <p>
+                Le diagramme de GANTT montre que la durée totale de réalisation
+                du projet est de <strong>21 jours</strong>.
+            </p>
+
+            <h3>10. Résultats du graphe MPM</h3>
+
+            <p>
+                Les tâches critiques sont :
+            </p>
+
+            <ul>
+                <li>G</li>
+                <li>C</li>
+                <li>D</li>
+                <li>F</li>
+            </ul>
+
+            <p>
+                Le chemin critique est :
+            </p>
+
+            <div class="formula">
+                Début → G → C → D → F → Fin
+            </div>
+
+            <p>
+                La durée totale du projet est donc de :
+            </p>
+
+            <div class="formula">
+                21 jours
+            </div>
+
+            <h3>11. Points essentiels à retenir</h3>
+            <ul>
+                <li>La marge mesure le retard possible sur une tâche.</li>
+                <li>Une tâche critique possède une marge nulle.</li>
+                <li>Le chemin critique détermine la durée du projet.</li>
+                <li>Le diagramme de GANTT permet une visualisation chronologique.</li>
+            </ul>
+        </div>
+
+        <!-- Vidéo du cours -->
+        <div class="video-container">
+            <h2>Vidéo du cours MPM</h2>
+            <div class="video-wrapper">
+                <i class="fas fa-play-circle"></i>
+                <p>Insérer ici votre vidéo du cours MPM</p>
+            </div>
+        </div>
+
+        <!-- Exercice corrigé -->
+        <div class="video-container">
+            <h2>Exercice corrigé - MPM</h2>
+            <p style="margin-bottom: 1rem; color: #6b7280;">
+                Téléchargez l’énoncé de l’exercice puis regardez la correction détaillée.
+            </p>
+
+            <a href="../pdf/exercice-mpm.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            style="margin-bottom: 1.5rem;">
+                <i class="fas fa-file-pdf"></i>
+                Télécharger le PDF de l'exercice
+            </a>
+
+            <div class="video-wrapper">
+                    <iframe
+                    src="https://www.youtube.com/embed/2PdEeSiMRSI"
+                    title="Exo MPM"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- COURS PREMIUM : BUDGETS -->
+        <!-- ===================================================== -->
+
+        <div class="fiche-technique">
+            <h2><i class="fas fa-calculator"></i> Budgets</h2>
+
+            <h3>1. Définition</h3>
+            <p>
+                Le budget correspond à l’ensemble des prévisions et programmes établis
+                sur une période de 6 mois à 1 an, généralement l’exercice comptable.
+            </p>
+
+            <p>
+                Il permet à l’entreprise de :
+            </p>
+            <ul>
+                <li>prévoir ses ventes et ses achats ;</li>
+                <li>anticiper ses encaissements et décaissements ;</li>
+                <li>estimer sa TVA à payer ;</li>
+                <li>prévoir sa trésorerie finale ;</li>
+                <li>prendre des décisions correctives.</li>
+            </ul>
+
+            <h3>2. Volet I : Les budgets élémentaires</h3>
+
+            <h3>Budget des ventes</h3>
+            <p>
+                Le budget des ventes permet de déterminer le chiffre d’affaires
+                prévisionnel hors taxes et toutes taxes comprises.
+            </p>
+
+            <div class="formula">
+                CA HT = Quantités vendues × Prix de vente
+                <br>
+                TVA collectée = CA HT × Taux de TVA
+                <br>
+                CA TTC = CA HT + TVA
+            </div>
+
+            <h3>Budget des approvisionnements</h3>
+            <p>
+                Il prévoit les achats de matières premières ou de marchandises.
+            </p>
+
+            <div class="formula">
+                TVA = Montant HT × Taux de TVA
+                <br>
+                Total TTC = HT + TVA
+            </div>
+
+            <h3>Budget de production</h3>
+            <p>
+                Utilisé dans les entreprises industrielles, il regroupe :
+            </p>
+            <ul>
+                <li>les matières premières consommées ;</li>
+                <li>la main d’œuvre directe ;</li>
+                <li>les frais de production ;</li>
+                <li>les amortissements.</li>
+            </ul>
+
+            <h3>Budget des investissements</h3>
+            <p>
+                Il recense les dépenses prévues liées aux projets d’investissement.
+            </p>
+
+            <h3>Budget des autres frais</h3>
+            <p>
+                Il comprend les frais d’administration, de distribution
+                et les frais généraux.
+            </p>
+
+            <h3>Budget de TVA</h3>
+            <p>
+                Il permet de déterminer la TVA à décaisser.
+            </p>
+
+            <div class="formula">
+                TVA à décaisser =
+                TVA collectée − TVA déductible
+            </div>
+
+            <h3>3. Volet II : Budgets de trésorerie</h3>
+
+            <h3>Budget des recettes</h3>
+            <p>
+                Il regroupe tous les encaissements TTC en tenant compte
+                des délais de paiement des clients.
+            </p>
+
+            <h3>Budget des dépenses</h3>
+            <p>
+                Il regroupe tous les décaissements TTC :
+                fournisseurs, salaires, TVA, impôts, emprunts, investissements.
+            </p>
+
+            <h3>Budget général de trésorerie</h3>
+            <p>
+                Il permet de calculer la trésorerie finale.
+            </p>
+
+            <div class="formula">
+                Trésorerie finale =
+                Trésorerie initiale + Recettes − Dépenses
+            </div>
+
+            <h3>Exemple</h3>
+            <p>
+                Si l’entreprise dispose de 20 000 € au début du mois,
+                encaisse 80 500 € et décaisse 145 240 € :
+            </p>
+
+            <div class="formula">
+                20 000 + 80 500 − 145 240 = −44 740 €
+            </div>
+
+            <p>
+                La trésorerie devient négative, l’entreprise devra prévoir
+                un financement à court terme.
+            </p>
+
+            <h3>4. Points essentiels à retenir</h3>
+            <ul>
+                <li>Le budget des ventes est le point de départ.</li>
+                <li>Le budget de TVA permet de calculer la TVA à payer.</li>
+                <li>Le budget de trésorerie anticipe les besoins de financement.</li>
+                <li>La trésorerie finale doit rester positive.</li>
+            </ul>
+        </div>
+
+        <!-- Vidéo du cours -->
+        <div class="video-container">
+            <h2>Vidéo du cours Budgets</h2>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/CdE--xjOkm4"
+                    title="Cours Budgets"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Exercice corrigé -->
+        <div class="video-container">
+            <h2>Exercice corrigé - Budgets</h2>
+            <p style="margin-bottom: 1rem; color: #6b7280;">
+                Téléchargez l’énoncé de l’exercice puis regardez la correction détaillée.
+            </p>
+
+            <a href="../pdf/exercice-budgets.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            style="margin-bottom: 1.5rem;">
+                <i class="fas fa-file-pdf"></i>
+                Télécharger le PDF de l'exercice
+            </a>
+
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/AAUnewUZHgI"
+                    title="Exercice Budgets"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    <!-- ===================================================== -->
+    <!-- MATRICE BCG -->
+    <!-- ===================================================== -->
+
+    <div class="fiche-technique">
+        <h2><i class="fas fa-chart-pie"></i> Matrice BCG</h2>
+
+        <h3>1. Présentation de la matrice BCG</h3>
+        <p>
+            La matrice BCG (Boston Consulting Group) est un outil stratégique permettant
+            d’analyser le portefeuille d’activités d’une entreprise.
+        </p>
+
+        <p>Chaque Domaine d’Activité Stratégique (DAS) est positionné selon :</p>
+
+        <ul>
+            <li><strong>Axe horizontal :</strong> la part de marché relative (PDMR)</li>
+            <li><strong>Axe vertical :</strong> le taux de croissance du marché</li>
+            <li><strong>Taille du cercle :</strong> proportionnelle au chiffre d’affaires</li>
+        </ul>
+
+        <h3>2. Interprétation des zones</h3>
+        <ul>
+            <li><strong>Vedettes</strong> : forte croissance et forte part de marché</li>
+            <li><strong>Vaches à lait</strong> : faible croissance et forte part de marché</li>
+            <li><strong>Dilemmes</strong> : forte croissance et faible part de marché</li>
+            <li><strong>Poids morts</strong> : faible croissance et faible part de marché</li>
+        </ul>
+
+        <h3>3. Formules de calcul</h3>
+
+        <h4>Part de marché relative</h4>
+        <div class="formula">
+            PDMR = CA du DAS de l'entreprise / CA du principal concurrent
+        </div>
+
+        <h4>Taux de croissance du marché</h4>
+        <div class="formula">
+            Taux de croissance = (CA N − CA N-1) / CA N-1
+        </div>
+
+        <h4>Surface d’un cercle</h4>
+        <div class="formula">
+            S = π × R²
+        </div>
+
+        <h4>Calcul du diamètre</h4>
+        <div class="formula">
+            R = √(S / π)<br>
+            D = 2 × R
+        </div>
+
+        <h3>4. Exemple de calcul des parts de marché relatives</h3>
+
+        <div class="formula">
+            PDMR(A) = 24 / 110 = 0,22<br>
+            PDMR(B) = 35 / 38 = 0,92<br>
+            PDMR(C) = 260 / 187 = 1,39<br>
+            PDMR(D) = 83 / 165 = 0,50<br>
+            PDMR(E) = 18 / 21 = 0,86<br>
+            PDMR(F) = 635 / 450 = 1,41<br>
+            PDMR(G) = 93 / 85 = 1,09
+        </div>
+
+        <h3>5. Calcul des diamètres des cercles</h3>
+        <p>
+            Le DAS ayant le plus faible chiffre d’affaires est E (18 000 €).
+            Il est représenté par un cercle de 1 cm de diamètre.
+        </p>
+
+        <div class="formula">
+            Rayon(E) = 0,5 cm<br>
+            Surface(E) = π × 0,5² = 0,785 cm²
+        </div>
+
+        <h4>Exemple détaillé pour F</h4>
+
+        <div class="formula">
+            635 / 18 = 35,27<br>
+            Surface(F) = 0,785 × 35,27 = 27,69 cm²<br>
+            Rayon(F) = √(27,69 / π) = 2,97 cm<br>
+            Diamètre(F) = 5,94 cm
+        </div>
+
+        <h3>6. Tableau récapitulatif</h3>
+
+        <div style="overflow-x:auto;">
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem;">
+                <thead>
+                    <tr style="background:#4f46e5; color:white;">
+                        <th style="padding:10px; border:1px solid #ddd;">Activité</th>
+                        <th style="padding:10px; border:1px solid #ddd;">CA</th>
+                        <th style="padding:10px; border:1px solid #ddd;">PDMR</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Croissance</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Diamètre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:8px; border:1px solid #ddd;">A</td>
+                        <td style="padding:8px; border:1px solid #ddd;">24</td>
+                        <td style="padding:8px; border:1px solid #ddd;">0,22</td>
+                        <td style="padding:8px; border:1px solid #ddd;">10 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">1,20 cm</td>
+                    </tr>
+                    <tr style="background:#f9fafb;">
+                        <td style="padding:8px; border:1px solid #ddd;">B</td>
+                        <td style="padding:8px; border:1px solid #ddd;">35</td>
+                        <td style="padding:8px; border:1px solid #ddd;">0,92</td>
+                        <td style="padding:8px; border:1px solid #ddd;">18 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">1,40 cm</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px; border:1px solid #ddd;">C</td>
+                        <td style="padding:8px; border:1px solid #ddd;">260</td>
+                        <td style="padding:8px; border:1px solid #ddd;">1,39</td>
+                        <td style="padding:8px; border:1px solid #ddd;">14 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">3,80 cm</td>
+                    </tr>
+                    <tr style="background:#f9fafb;">
+                        <td style="padding:8px; border:1px solid #ddd;">D</td>
+                        <td style="padding:8px; border:1px solid #ddd;">83</td>
+                        <td style="padding:8px; border:1px solid #ddd;">0,50</td>
+                        <td style="padding:8px; border:1px solid #ddd;">3 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">2,14 cm</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px; border:1px solid #ddd;">E</td>
+                        <td style="padding:8px; border:1px solid #ddd;">18</td>
+                        <td style="padding:8px; border:1px solid #ddd;">0,86</td>
+                        <td style="padding:8px; border:1px solid #ddd;">18 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">1,00 cm</td>
+                    </tr>
+                    <tr style="background:#f9fafb;">
+                        <td style="padding:8px; border:1px solid #ddd;">F</td>
+                        <td style="padding:8px; border:1px solid #ddd;">635</td>
+                        <td style="padding:8px; border:1px solid #ddd;">1,41</td>
+                        <td style="padding:8px; border:1px solid #ddd;">16 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">5,94 cm</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px; border:1px solid #ddd;">G</td>
+                        <td style="padding:8px; border:1px solid #ddd;">93</td>
+                        <td style="padding:8px; border:1px solid #ddd;">1,09</td>
+                        <td style="padding:8px; border:1px solid #ddd;">9 %</td>
+                        <td style="padding:8px; border:1px solid #ddd;">2,30 cm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>7. Interprétation de l'exemple</h3>
+        <ul>
+            <li><strong>F</strong> et <strong>C</strong> sont des Vedettes (forte croissance, forte PDMR).</li>
+            <li><strong>G</strong> est une Vache à lait (faible croissance, forte PDMR).</li>
+            <li><strong>B</strong> et <strong>E</strong> sont des Dilemmes.</li>
+            <li><strong>A</strong> et <strong>D</strong> sont des Poids morts.</li>
+        </ul>
+
+        <h3>8. Recommandations stratégiques</h3>
+        <ul>
+            <li>Investir dans les Vedettes pour maintenir leur position.</li>
+            <li>Exploiter les Vaches à lait pour générer des liquidités.</li>
+            <li>Analyser les Dilemmes avant d’investir ou de se retirer.</li>
+            <li>Envisager l’abandon des Poids morts.</li>
+        </ul>
+
+        <h3>9. Points essentiels à retenir</h3>
+        <ul>
+            <li>La PDMR compare l’entreprise à son principal concurrent.</li>
+            <li>Le taux de croissance mesure l’évolution du marché.</li>
+            <li>La taille du cercle est proportionnelle au chiffre d’affaires.</li>
+            <li>La matrice BCG aide à orienter la stratégie de portefeuille.</li>
+        </ul>
+    </div>
+
+    <!-- Vidéo du cours -->
+    <div class="video-container">
+        <h2>Vidéo du cours Matrice BCG</h2>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/ul43HVYYDIU"
+                title="Cours BCG"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Exercice corrigé -->
+    <div class="video-container">
+        <h2>Exercice corrigé - Matrice BCG</h2>
+
+        <p style="margin-bottom: 1rem; color: #6b7280;">
+            Téléchargez l’énoncé de l’exercice puis regardez la correction détaillée.
+        </p>
+
+        <a href="../pdf/exercice-bcg.pdf"
+        class="btn btn-outline"
+        target="_blank"
+        style="margin-bottom: 1.5rem;">
+            <i class="fas fa-file-pdf"></i>
+            Télécharger le PDF de l'exercice
+        </a>
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/w5FYCLzG0ik"
+                title="Exo BCG"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+        <div class="fiche-technique">
+            <h2><i class="fas fa-chart-line"></i> Investissements</h2>
+
+            <h3>1. Tableau des Flux Nets de Trésorerie (FNT)</h3>
+            <p>
+                Les flux nets de trésorerie représentent les gains potentiels générés
+                par un projet d’investissement.
+            </p>
+
+            <div class="formula">
+                FNT = Recettes liées au projet − Dépenses liées au projet
+            </div>
+
+            <h3>2. Valeur Actuelle Nette (VAN)</h3>
+            <div class="formula">
+                VAN = FNT actualisés − Montant investi
+            </div>
+
+            <p>Si VAN > 0, le projet est rentable.</p>
+
+            <h3>3. Indice de Profitabilité (IP)</h3>
+            <div class="formula">
+                IP = FNT actualisés / Montant investi
+            </div>
+
+            <p>Si IP > 1, le projet est rentable.</p>
+
+            <h3>4. Délai de Récupération du Capital Investi (DRCI)</h3>
+            <p>
+                Le DRCI indique à partir de quelle date le projet devient rentable.
+            </p>
+
+            <h3>5. Taux de Rentabilité Interne (TRI)</h3>
+            <p>
+                Le TRI est le taux pour lequel la VAN est nulle.
+            </p>
+
+            <div class="formula">
+                VAN = 0
+            </div>
+
+            <h3>6. Exemple de calcul du TRI</h3>
+            <p>
+                Pour un taux de 7,5 %, la VAN est de 140 000 €.
+                Pour un taux de 15 %, la VAN est de -12 000 €.
+            </p>
+
+            <div class="formula">
+                TRI ≈ 14,40 %
+            </div>
+
+            <h3>7. Points essentiels à retenir</h3>
+            <ul>
+                <li>FNT = Recettes − Dépenses</li>
+                <li>VAN > 0 : projet rentable</li>
+                <li>IP > 1 : projet rentable</li>
+                <li>Le TRI annule la VAN</li>
+                <li>Le DRCI mesure le temps de récupération</li>
+            </ul>
+        </div>
+
+        <div class="video-container">
+            <h2>Vidéo du cours Investissements</h2>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/U3YkoLOX8PY"
+                    title="Cours Investissements"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <h2>Exercice corrigé - Investissements</h2>
+
+            <p style="margin-bottom: 1rem; color: #6b7280;">
+                Téléchargez l’énoncé de l’exercice puis regardez la correction détaillée.
+            </p>
+
+            <a href="../pdf/exercice-investissements.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            style="margin-bottom: 1.5rem;">
+                <i class="fas fa-file-pdf"></i>
+                Télécharger le PDF de l'exercice
+            </a>
+
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/RX0f66rrEGg"
+                    title="Exo Investissements"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <p>&copy; 2025 CISCK M1 - Projet universitaire</p>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

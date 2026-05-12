@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formule Gratuite - CISCK M1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CISCK M1</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="gratuit.html" class="active">Formule Gratuite</a></li>
+                <li><a href="premium.html">Formule Premium</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1><i class="fas fa-gift"></i> Formule Gratuite</h1>
+            <p>Découvrez les bases de la méthode MPM gratuitement</p>
+        </section>
+
+        <section class="content-section">
+            <!-- Fiche Technique MPM -->
+            <div class="fiche-technique">
+                <h2><i class="fas fa-file-alt"></i> Fiche Technique - Méthode MPM</h2>
+                
+                <h3>Définition</h3>
+                <p>La <strong>Méthode des Potentiels Métra (MPM)</strong> est une technique d'ordonnancement de projet qui permet de déterminer les dates de début et de fin de chaque tâche, ainsi que le chemin critique du projet.</p>
+
+                <h3>Principes fondamentaux</h3>
+                <ul>
+                    <li><strong>Représentation par sommets</strong> : Les tâches sont représentées par des nœuds (sommets)</li>
+                    <li><strong>Arcs = contraintes</strong> : Les flèches représentent les relations d'antériorité</li>
+                    <li><strong>Potentiels</strong> : Chaque sommet possède une date au plus tôt et au plus tard</li>
+                </ul>
+
+                <h3>Calculs essentiels</h3>
+                <div class="formula">
+                    <strong>Date au plus tôt (DTO)</strong> = max(DTO prédécesseur + durée prédécesseur)
+                </div>
+                <div class="formula">
+                    <strong>Date au plus tard (DTA)</strong> = min(DTA successeur) - durée tâche
+                </div>
+                <div class="formula">
+                    <strong>Marge Totale (MT)</strong> = DTA - DTO
+                </div>
+                <div class="formula">
+                    <strong>Marge Libre (ML)</strong> = min(DTO successeurs) - DTO - durée
+                </div>
+
+                <h3>Le Chemin Critique</h3>
+                <p>Le <strong>chemin critique</strong> est la séquence de tâches dont la marge totale est nulle (MT = 0). Ces tâches déterminent la durée minimale du projet. Tout retard sur une tâche critique retarde le projet entier.</p>
+
+                <h3>Étapes de construction</h3>
+                <ol style="padding-left: 1.5rem;">
+                    <li>Lister toutes les tâches avec leurs durées et antériorités</li>
+                    <li>Construire le graphe (nœuds et arcs)</li>
+                    <li>Calculer les dates au plus tôt (de gauche à droite)</li>
+                    <li>Calculer les dates au plus tard (de droite à gauche)</li>
+                    <li>Calculer les marges</li>
+                    <li>Identifier le chemin critique (marges = 0)</li>
+                </ol>
+            </div>
+
+            <!-- Exercice corrigé -->
+            <div class="video-container">
+                <h2>Exercice corrigé - MPM</h2>
+
+                <p style="margin-bottom: 1rem; color: #6b7280;">
+                    Téléchargez l’énoncé de l’exercice puis regardez la correction détaillée.
+                </p>
+
+                <a href="../pdf/exercice-mpm.pdf"
+                class="btn btn-outline"
+                target="_blank"
+                style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-file-pdf"></i>
+                    Télécharger le PDF de l'exercice
+                </a>
+
+                <div class="video-wrapper" style="margin-top: 1.5rem;">
+                    <iframe
+                        src="https://www.youtube.com/embed/2PdEeSiMRSI"
+                        title="Exo MPM"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- CTA Premium -->
+            <div class="fiche-technique" style="text-align: center; background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); color: white;">
+                <h2 style="color: white; border-bottom-color: rgba(255,255,255,0.3);">
+                    <i class="fas fa-crown"></i> Envie d'aller plus loin ?
+                </h2>
+                <p style="font-size: 1.125rem; margin: 1.5rem 0;">
+                    Accédez à <strong>4 cours complets</strong>, toutes les fiches techniques et tous les exercices corrigés avec la formule Premium !
+                </p>
+                <a href="premium.html" class="btn btn-primary" style="background: #f59e0b; color: #1f2937;">
+                    Découvrir la Formule Premium - 10€/mois
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CISCK M1</h4>
+                <p>Votre plateforme de cours en planification et contrôle.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="gratuit.html">Formule Gratuite</a></li>
+                    <li><a href="premium.html">Formule Premium</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CISCK M1 - Projet universitaire</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

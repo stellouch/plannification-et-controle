@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCK M1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ===== Header ===== -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CISCK M1</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="pages/gratuit.html">Formule Gratuite</a></li>
+                <li><a href="pages/premium.html">Formule Premium</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== Main ===== -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>
+                    Réussissez vos cours de
+                    <span class="highlight">Planification et contrôle</span>
+                </h1>
+
+                <p>
+                    Une plateforme dédiée aux étudiants de Master 1 avec des cours,
+                    fiches techniques, exercices corrigés et vidéos explicatives.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="pages/gratuit.html" class="btn btn-secondary">
+                        Découvrir gratuitement
+                    </a>
+
+                    <a href="pages/premium.html" class="btn btn-primary">
+                        Accès Premium - 10€/mois
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formules -->
+        <section class="formules" id="formules">
+            <h2>Nos Formules</h2>
+
+            <div class="cards-container">
+
+                <!-- Formule gratuite -->
+                <div class="card card-free">
+                    <div class="card-header">
+                        <i class="fas fa-gift"></i>
+                        <h3>Formule Gratuite</h3>
+                        <p class="price">0€</p>
+                    </div>
+
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Fiche technique MPM</li>
+                            <li><i class="fas fa-check"></i> 1 exercice corrigé en vidéo</li>
+                            <li><i class="fas fa-check"></i> Accès illimité au contenu gratuit</li>
+
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                Cours complets Premium
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                Toutes les fiches techniques
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                Tous les exercices corrigés
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="pages/gratuit.html" class="btn btn-outline">
+                            Commencer gratuitement
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formule Premium -->
+                <div class="card card-premium">
+                    <div class="badge">Populaire</div>
+
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Formule Premium</h3>
+                        <p class="price">10€<span>/mois</span></p>
+                    </div>
+
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 4 cours complets en mini-vidéos</li>
+                            <li><i class="fas fa-check"></i> Toutes les fiches techniques</li>
+                            <li><i class="fas fa-check"></i> Exercices corrigés en vidéo</li>
+                            <li><i class="fas fa-check"></i> Accès illimité</li>
+                            <li><i class="fas fa-check"></i> Paiement sécurisé</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="pages/premium.html" class="btn btn-primary">
+                            S'abonner maintenant
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aperçu des cours -->
+        <section class="cours-preview">
+            <h2>Les Cours Disponibles</h2>
+
+            <div class="cours-grid">
+
+                <!-- MPM -->
+                <div class="cours-item">
+                    <div class="cours-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Méthode MPM</h3>
+                    <p>
+                        Méthode des Potentiels Métra pour l’ordonnancement et
+                        l’identification du chemin critique du projet plus détaillée que la version gratuite.
+                    </p>
+                </div>
+
+                <!-- Budgets -->
+                <div class="cours-item">
+                    <div class="cours-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Budgets</h3>
+                    <p>
+                        Budgets des ventes, TVA, approvisionnements et
+                        prévisions financières.
+                    </p>
+                </div>
+
+                <!-- Matrice BCG -->
+                <div class="cours-item">
+                    <div class="cours-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Matrice BCG</h3>
+                    <p>
+                        Analyse stratégique des produits :
+                        Vedettes, Vaches à lait, Dilemmes et Poids morts.
+                    </p>
+                </div>
+
+                <!-- Ecarts -->
+                <div class="cours-item">
+                    <div class="cours-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investissements</h3>
+                    <p>
+                        VAN, TRI, IR, etc.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CISCK M1</h4>
+                <p>
+                    Plateforme pédagogique pour les étudiants de Master 1.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/gratuit.html">Formule Gratuite</a></li>
+                    <li><a href="pages/premium.html">Formule Premium</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    contact@cisck.fr
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CISCK M1 - Projet universitaire</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
