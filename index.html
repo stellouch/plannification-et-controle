@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISCK M1</title>
+    <title>CISCK M1 - Accueil</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Surcharges locales pour l'en-tête index.html */
+        .hero {
+            padding: 80px 5%;
+            text-align: left; /* Alignement texte à gauche pour le design split */
+            background: radial-gradient(circle at top right, #eef2ff, #ffffff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Container flexible pour le texte et l'image */
+        .hero-split-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Colonne de texte */
+        .hero-text-column {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text-column h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .hero-text-column p {
+            font-size: 1.1rem;
+            color: var(--slate);
+            margin: 0 0 2rem 0; /* Marge réinitialisée pour l'alignement gauche */
+            max-width: 100%; /* Surcharge du max-width global */
+        }
+
+        .hero-text-column .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start; /* Boutons alignés à gauche */
+        }
+
+        /* Colonne de l'image illustration générée */
+        .hero-image-column {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-illustration {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Adaptation mobile : Passage à 1 colonne */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding: 60px 5%;
+            }
+            .hero-split-container {
+                flex-direction: column-reverse; /* Image en bas sur mobile */
+                gap: 30px;
+            }
+            .hero-text-column {
+                max-width: 100%;
+            }
+            .hero-text-column h1 {
+                font-size: 2.2rem;
+            }
+            .hero-text-column .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-column {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,12 +115,19 @@
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1>Réussissez vos cours de <span class="highlight">Planification et contrôle</span></h1>
-                <p>Une plateforme dédiée aux étudiants de Master 1 avec des cours, fiches techniques, exercices corrigés et vidéos explicatives.</p>
-                <div class="hero-buttons">
-                    <a href="pages/gratuit.html" class="btn btn-secondary">Découvrir gratuitement</a>
-                    <a href="pages/premium.html" class="btn btn-primary">Accès Premium - 10€/mois</a>
+            <div class="hero-split-container">
+                
+                <div class="hero-text-column">
+                    <h1>Maîtrisez la <span class="highlight">Planification et le Contrôle</span></h1>
+                    <p>La plateforme ultime pour les étudiants de Master 1. Fiches de révision, méthodes pas à pas, exercices corrigés et vidéos explicatives pour réussir vos examens.</p>
+                    <div class="hero-buttons">
+                        <a href="pages/gratuit.html" class="btn btn-secondary">Découvrir gratuitement</a>
+                        <a href="pages/premium.html" class="btn btn-primary">Accès Premium - 10€/mois</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-column">
+                    <img src="images/hero-illustration.jpeg" alt="Illustration moderne de planification et contrôle budgétaire M1" class="hero-illustration">
                 </div>
             </div>
         </section>
